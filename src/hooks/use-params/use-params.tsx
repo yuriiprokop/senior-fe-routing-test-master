@@ -1,4 +1,4 @@
-const useParams = () => {
+const useParams = (): never => {
     throw new Error("not implemented");
 }
 
