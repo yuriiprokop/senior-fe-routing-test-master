@@ -1,10 +1,9 @@
 import { FC } from "react";
 
 const Order: FC = () => {
-    // const { id } = useParams();
     return (
         <div>
-            {/* <h1>Order {id}</h1> */}
+            <h1>Order ID</h1>
         </div>
     );
 }
