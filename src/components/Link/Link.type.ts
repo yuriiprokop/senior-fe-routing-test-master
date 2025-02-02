@@ -1,7 +1,8 @@
 import { ReactNode } from "react";
+import { ExtractPathParams, RouterPaths } from "../../types/router.type";
 
-export interface LinkProps {
-    to: string;
-    params?: { [key: string]: string };
+export type LinkProps<T extends RouterPaths> = {
+    to: T;
     children: ReactNode;
-}
+    params?: ExtractPathParams<T>;
+};

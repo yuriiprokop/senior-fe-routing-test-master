@@ -1,0 +1,1 @@
+export const WINDOW_POP_STATE_EVENT = "popstate";
