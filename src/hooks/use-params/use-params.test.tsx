@@ -8,8 +8,7 @@ import { beforeEach } from 'node:test';
 vi.mock('../../utils/router.utils');
 
 describe('useParams hook', () => {
-
-    afterEach(() => {
+    beforeAll(() => {
         window.history.pushState({}, '', '/dashboard');
     });
 
@@ -31,6 +30,7 @@ describe('useParams hook', () => {
     });
 
     it('should return params for /dashboard', () => {
+        window.history.pushState({}, '', '/dashboard');
         const { result } = renderHook(() => useParams());
         expect(result.current).toEqual(undefined);
         expect(routerUtils.getRouteParams).toHaveBeenCalledWith('/dashboard', ROUTER_CONFIG);
