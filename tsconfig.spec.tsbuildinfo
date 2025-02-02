@@ -1,0 +1,1 @@
+{"root":["./src/utils/router.utils.test.ts","./src/app.test.tsx","./src/pages/dashboard/dashboard.test.tsx","./src/pages/order/order.test.tsx","./src/vite-env.d.ts","./tests/setup.ts"],"version":"5.6.3"}
