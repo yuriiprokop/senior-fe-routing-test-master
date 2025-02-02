@@ -1,6 +1,6 @@
 import { render, screen } from "@testing-library/react";
 export { userEvent } from '@testing-library/user-event';
-import { beforeAll, describe, expect, it} from "vitest";
+import { afterAll, beforeAll, describe, expect, it } from "vitest";
 import App from "./App";
 import userEvent from "@testing-library/user-event";
 
@@ -10,8 +10,11 @@ describe("App", () => {
     window.history.pushState({}, '', '/dashboard');
   });
 
+  afterAll(() => {
+    window.history.pushState({}, '', '/');
+  });
+
   it("should render and route to order", async () => {
-    window.history.pushState({}, '', '/dashboard');
 
     render(<App />);
     expect(screen.getByText("Dashboard")).toBeVisible();
