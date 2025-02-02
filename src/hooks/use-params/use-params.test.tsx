@@ -3,7 +3,6 @@ import useParams from './use-params';
 import { renderHook } from '@testing-library/react';
 import { ROUTER_CONFIG } from '../../constants/router.const';
 import * as routerUtils from '../../utils/router.utils';
-import { beforeEach } from 'node:test';
 
 vi.mock('../../utils/router.utils');
 
