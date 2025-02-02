@@ -4,10 +4,10 @@ import Order from "../pages/order/Order";
 export const ROUTER_CONFIG = [
     {
         path: "/dashboard",
-        element: <Dashboard />,
+        element: Dashboard,
     },
     {
         path: "/orders/:id",
-        element: <Order />,
-    },
+        element: Order,
+    }
 ] as const;

@@ -1,10 +1,6 @@
-import { ReactNode } from "react";
+import { RouterConfig } from "../../types/router.type";
 
 export interface RouterProps {
-    config: readonly RouterConfig[];
+    config: RouterConfig;
 }
 
-interface RouterConfig {
-    path: string;
-    element: ReactNode;
-}
